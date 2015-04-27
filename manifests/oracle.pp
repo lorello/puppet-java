@@ -53,7 +53,9 @@ class java::oracle (
         location   => $location,
         release    => $release,
         repos      => $repos,
-        key        => $key,
-        key_server => $key_server,
+        key        => {
+          'id' => $key, 
+          'server' => $key_server,
+        },
     }
 }
